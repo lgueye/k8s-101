@@ -18,11 +18,25 @@ curl -sfL https://get.k3s.io | sh -
 
 ```bash
 cd docker
-docker image build -t bulletinboard:1.0 .
+docker image build -t helloworld:1.0 .
 ```
 
 ```bash
-docker container run --publish 8080:8080 --name bb bulletinboard:1.0
+docker container run --publish 8080:8080 --name hw helloworld:1.0
 ```
 
 Tester dans le browser à l'adresse ``http://localhost:8080``.
+
+## Kubernetes
+
+### TP 1
+
+### TP 2
+
+### TP 3 - Premier pod sur Kubernetes
+
+Les images suivantes sont dispo sur docker hub
+```bash
+pevablanchard/k8s-101:1.0
+pevablanchard/k8s-101:2.0
+```
