@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-with-probes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp-with-probes
+  template:
+    metadata:
+      labels:
+        app: myapp-with-probes
+    spec:
+      containers:
+        - name: myapp
+          image: "pevablanchard/k8s-101:1.0"
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: "/sickz"
+            initialDelaySeconds: 3
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              port: 8080
+              path: "/sickz"
+            initialDelaySeconds: 3
+            periodSeconds: 5

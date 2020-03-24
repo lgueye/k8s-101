@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-with-config
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp-with-config
+  template:
+    metadata:
+      labels:
+        app: myapp-with-config
+    spec:
+      volumes:
+        - name: config-volume
+          configMap:
+            name: myapp-config
+      containers:
+        - name: myapp
+          image: "pevablanchard/k8s-101:1.0"
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: config-volume
+              mountPath: /app/config
