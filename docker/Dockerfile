@@ -1,7 +1,10 @@
-FROM node:current-slim
-WORKDIR /usr/src/app
-COPY node-bulletin-board/bulletin-board-app/ .
-RUN npm install
-EXPOSE 8080
-CMD ["npm", "start"]
+FROM golang:latest
+WORKDIR /app
+COPY helloworld/go.mod helloworld/go.sum ./
+RUN go mod download
+COPY helloworld/main.go .
+RUN go build -o helloworld .
+CMD ["./helloworld"]
+
+
 
