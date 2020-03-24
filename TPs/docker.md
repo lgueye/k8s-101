@@ -83,6 +83,8 @@ sudo docker volume create hw-volume
 Run le container en montant le volume nommé, e.g., pour persister les logs
 ```bash
 sudo docker container run -d --publish 8080:8080 -v hw-volume:/logs --name hw3 helloworld:1.0
+curl localhost:8080
+curl localhost:8080/sickz
 ```
 
 Le volume peut être partagé, e.g.
