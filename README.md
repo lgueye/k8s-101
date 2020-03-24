@@ -15,7 +15,7 @@ curl -sfL https://get.k3s.io | sh -
 ```
 
 
-Install git and docker on the VM instance.
+Install some stuff on the VM instance.
 ```bash
 sudo apt install git docker.io
 ```
@@ -25,7 +25,6 @@ Clone the repo.
 git clone https://github.com/pevab/k8s-101.git
 cd k8s-101
 ```
-
 
 ## Kubernetes
 

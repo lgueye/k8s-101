@@ -9,9 +9,9 @@ import (
 )
 
 func main() {
-	logfile, err := os.OpenFile("logs", os.O_APPEND | os.O_WRONLY, 0644)
+	logfile, err := os.OpenFile("/logs/out", os.O_APPEND | os.O_WRONLY, 0644)
 	if os.IsNotExist(err) {
-		logfile, err = os.Create("logs")
+		logfile, err = os.Create("/logs/out")
 		if err != nil {
 			panic(err)
 		}
