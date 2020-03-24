@@ -15,7 +15,7 @@ func main() {
 
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) {
-		c.JSON(http.StatusOK, "Hello " + name + "!")
+		c.JSON(http.StatusOK, "Hello " + name + "! Again!")
 	})
 	r.GET("/sickz", func (c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, "I'm sick!")

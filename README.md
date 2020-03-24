@@ -14,18 +14,18 @@ multipass shell k3s
 curl -sfL https://get.k3s.io | sh -
 ```
 
-## Docker
 
+Install git and docker on the VM instance.
 ```bash
-cd docker
-docker image build -t helloworld:1.0 .
+sudo apt install git docker.io
 ```
 
+Clone the repo.
 ```bash
-docker container run --publish 8080:8080 --name hw helloworld:1.0
+git clone https://github.com/pevab/k8s-101.git
+cd k8s-101
 ```
 
-Tester dans le browser à l'adresse ``http://localhost:8080``.
 
 ## Kubernetes
 
