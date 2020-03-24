@@ -35,6 +35,11 @@ func main() {
 		count++
 		c.JSON(http.StatusOK, "Hello " + name + "!")
 	})
+	r.GET("/version", func (c *gin.Context) {
+		logfile.WriteString(strconv.FormatInt(count, 10) + "/ GET" + c.FullPath() + "\n")
+		count++
+		c.JSON(http.StatusOK, "1.0")
+	})
 	r.GET("/sickz", func (c *gin.Context) {
 		logfile.WriteString(strconv.FormatInt(count, 10) + "/ GET" + c.FullPath() + "\n")
 		count++
