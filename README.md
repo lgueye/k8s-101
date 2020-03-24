@@ -14,4 +14,15 @@ multipass shell k3s
 curl -sfL https://get.k3s.io | sh -
 ```
 
+## Docker
 
+```bash
+cd docker
+docker image build -t bulletinboard:1.0 .
+```
+
+```bash
+docker container run --publish 8080:8080 --name bb bulletinboard:1.0
+```
+
+Tester dans le browser à l'adresse ``http://localhost:8080``.
