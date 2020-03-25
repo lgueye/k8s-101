@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-with-side-car
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp-with-side-car
+  template:
+    metadata:
+      labels:
+        app: myapp-with-side-car
+    spec:
+      containers:
+        - name: myapp
+          image: "pevablanchard/k8s-101:1.0"
+          ports:
+            - containerPort: 8080
+        - name: sidecar
+          image: "busybox"
+          command:
+            - tail
+            - "-f"
+            - "/dev/urandom"
