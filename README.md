@@ -7,7 +7,7 @@ Le repo est organisé comme suit:
     - docker.md : quelques rudiments de docker
     - k8s-00.md : commandes de base ``kubectl``, collecte d'information, format d'affichage
     - k8s-01.md : ressources de base, pod, replica set, deploiement, configmap, secret, ingress
-    - k8s-02.md : aspect sécu, network policies, service account, rbac
+    - k8s-02.md : persistence, network policies, service account, rbac
 - docker
     - Dockerfile : un exemple de dockerfile
     - helloworld : un bout de code en go qu'on déploie dans le kube
