@@ -26,16 +26,9 @@ git clone https://github.com/pevab/k8s-101.git
 cd k8s-101
 ```
 
-## Kubernetes
-
-### TP 1
-
-### TP 2
-
-### TP 3 - Premier pod sur Kubernetes
-
 Les images suivantes sont dispo sur docker hub
 ```bash
 pevablanchard/k8s-101:1.0
 pevablanchard/k8s-101:2.0
 ```
+
