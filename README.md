@@ -32,3 +32,8 @@ pevablanchard/k8s-101:1.0
 pevablanchard/k8s-101:2.0
 ```
 
+## Utiles
+
+Dans un terminal:
+- ``Ctrl+C`` stop le process courant.
+- ``Ctrl+D`` vous déconnecte du shell courant.
