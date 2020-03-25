@@ -1,5 +1,18 @@
 # k8s-101
 
+## Structure
+
+Le repo est organisé comme suit:
+- TPs : les TP en markdown. Il vaut mieux les lire depuis le browser.
+    - docker.md : quelques rudiments de docker
+    - k8s-00.md : commandes de base ``kubectl``, collecte d'information, format d'affichage
+    - k8s-01.md : ressources de base, pod, replica set, deploiement, configmap, secret, ingress
+    - k8s-02.md : aspect sécu, network policies, service account, rbac
+- docker
+    - Dockerfile : un exemple de dockerfile
+    - helloworld : un bout de code en go qu'on déploie dans le kube
+- k8s : ressources k8s en yaml pour les TPs.
+
 ## Requirements
 
 MacOS. Install multipass, and start a VM instance.

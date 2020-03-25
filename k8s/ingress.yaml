@@ -1,0 +1,13 @@
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: myapp-ingress
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /helloworld
+            backend:
+              serviceName: myapp-svc
+              servicePort: 8080
