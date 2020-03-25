@@ -5,9 +5,10 @@ metadata:
   name: myapp-ingress
 spec:
   rules:
-    - http:
+    - host: hello.world
+      http:
         paths:
-          - path: /helloworld
+          - path: /
             backend:
               serviceName: myapp-svc
               servicePort: 8080
